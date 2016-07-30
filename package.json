@@ -1,0 +1,38 @@
+{
+  "name": "sweet-alert",
+  "version": "0.0.0",
+  "main": "dist/resources",
+  "author": "Pedram Emrouznejad (https://github.com/pemrouz)",
+  "license": "pemrouz.mit-license.org",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pemrouz/sweet-alert.git"
+  },
+  "scripts": {
+    "bundle": "browserify . -o dist/client.js -s sweetalert",
+    "gzip": "gzip -c dist/client.min.js > dist/client.min.js.gz",
+    "minify": "uglifyjs dist/client.js -m -c keep_fargs=false -o dist/client.min.js --screw-ie8",
+    "babel": "babel src -d dist --copy-files",
+    "clean": "rm -rf dist && mkdir dist",
+    "export": "sh -c 'rijs.export'",
+    "build": "npm run clean && npm run babel && npm run export && npm run bundle && npm run minify && npm run gzip",
+    "test-browser": "popper",
+    "test": "tap dist/resources/sweet-alert/test.js",
+    "coverage": "tap dist/resources/sweet-alert/test.js --cov --coverage-report=lcov",
+    "version": "npm run build && git add -A",
+    "postversion": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-preset-es2015": "*",
+    "babelify": "*",
+    "popper": "*",
+    "browserify": "*",
+    "browserenv": "*",
+    "tap": "*",
+    "utilise": "*",
+    "cssscope": "*",
+    "utilise.filify": "*",
+    "rijs.export": "*"
+  }
+}
