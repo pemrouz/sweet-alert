@@ -1,8 +1,9 @@
 # `sweet-alert`
 
 [![image](https://img.shields.io/badge/component-vanilla-green.svg?style=flat-square)](https://github.com/pemrouz/vanilla/#vanilla)
-
-[![Browser Results](https://saucelabs.com/browser-matrix/sweet-alert.svg)](https://saucelabs.com/u/sweet-alert)
+[![Build Status](https://travis-ci.org/pemrouz/sweet-alert.svg)](https://travis-ci.org/pemrouz/sweet-alert)
+[![Coverage Status](https://coveralls.io/repos/pemrouz/sweet-alert/badge.svg?branch=master&service=github)](https://coveralls.io/github/pemrouz/sweet-alert?branch=master)
+<br>[![Browser Results](https://saucelabs.com/browser-matrix/sweet-alert.svg)](https://saucelabs.com/u/sweet-alert)
 
 A beautiful replacement for JavaScript's `alert`
 
