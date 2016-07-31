@@ -3,11 +3,15 @@ globals:
   - <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.0.0/chai.min.js"></script>
   - <script src="https://rawgit.com/utilise/utilise/master/utilise.js"></script>
 
+farm: saucelabs
+
 runner: tape
 
-tests: (npm run build > /dev/null) && browserify ./dist/resources/lookup-multiple/test.js
-  -i jsdom 
+tests: (npm run build > /dev/null) && browserify 
+  -i jsdom
   -t utilise.filify
+  -t tapify
+  dist/resources/sweet-alert/test.js
 
 watch: 
   - src
@@ -17,4 +21,4 @@ browsers:
   - firefox
   - safari
   - ie11
-  - ie9
+  # - ie9 # socket.io broken on ie9

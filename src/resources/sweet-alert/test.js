@@ -1,17 +1,17 @@
 import 'utilise'
 import 'browserenv'
-import t from 'tap'
 import scope from 'cssscope'
 import swal from './sweet-alert'
 
 const style = window.getComputedStyle
     , o = once(document.body)('.container', 1, null, ':first-child')
+    , test = require('tap').test
     
 once(document.head)
   ('style', 1)
     .html(scope(file(__dirname + '/sweet-alert.css'), 'sweet-alert'))
 
-t.test('basic state', t => {
+test('basic state', t => {
   t.plan(1)
 
   const host = o('sweet-alert', 1).node()

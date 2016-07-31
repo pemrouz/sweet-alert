@@ -6,10 +6,6 @@ require('utilise');
 
 require('browserenv');
 
-var _tap = require('tap');
-
-var _tap2 = _interopRequireDefault(_tap);
-
 var _cssscope = require('cssscope');
 
 var _cssscope2 = _interopRequireDefault(_cssscope);
@@ -23,11 +19,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var style = window.getComputedStyle,
-    o = once(document.body)('.container', 1, null, ':first-child');
+    o = once(document.body)('.container', 1, null, ':first-child'),
+    test = require('tap').test;
 
 once(document.head)('style', 1).html((0, _cssscope2.default)(file(__dirname + '/sweet-alert.css'), 'sweet-alert'));
 
-_tap2.default.test('basic state', function (t) {
+test('basic state', function (t) {
   t.plan(1);
 
   var host = o('sweet-alert', 1).node();
