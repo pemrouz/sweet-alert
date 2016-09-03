@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = swal;
-function swal(state) {
-  var o = once(this);
+function swal(node, state) {
+  var o = once(node);
   var m = o('.modal', 1);
   var _state$exit = state.exit;
   var exit = _state$exit === undefined ? false : _state$exit;
@@ -49,7 +49,7 @@ function swal(state) {
     if (e.key == 'Escape') close();
   }
 
-  def(this, close);
+  def(node, close);
 }
 
 owner.swal = function (opts) {
