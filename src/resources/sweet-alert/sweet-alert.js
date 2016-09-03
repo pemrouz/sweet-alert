@@ -1,5 +1,5 @@
-export default function swal(state){
-  const o = once(this)
+export default function swal(node, state){
+  const o = once(node)
       , m = o('.modal', 1)
       , { exit = false
         , title = ''
@@ -43,7 +43,7 @@ export default function swal(state){
     if (e.key == 'Escape') close()
   }
   
-  def(this, close)
+  def(node, close)
 }
 
 owner.swal = opts => once(document.body)

@@ -61,6 +61,7 @@
 
     .icon::before,
     .icon::after {
+      opacity: 1;
       content: ''; 
       display: block;
       position: absolute; 
@@ -146,6 +147,8 @@
     font-family: inherit;
     font-size: 14px;
     margin: 20px 7px 0px;
+    line-height: 1em;
+    display: inline-block;
     border: none; }
 
   button:hover {
