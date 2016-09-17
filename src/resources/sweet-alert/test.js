@@ -15,7 +15,7 @@ test('basic state', t => {
   t.plan(1)
 
   const host = o('sweet-alert', 1).node()
-  swal.call(host, { 
+  swal(host, { 
     type: 'warning'
   , title: 'some title'
   , content: 'some <b>html</b> content'
