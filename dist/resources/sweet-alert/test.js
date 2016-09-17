@@ -28,7 +28,7 @@ test('basic state', function (t) {
   t.plan(1);
 
   var host = o('sweet-alert', 1).node();
-  _sweetAlert2.default.call(host, {
+  (0, _sweetAlert2.default)(host, {
     type: 'warning',
     title: 'some title',
     content: 'some <b>html</b> content',
