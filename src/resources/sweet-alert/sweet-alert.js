@@ -45,11 +45,3 @@ export default function swal(node, state){
   
   def(node, close)
 }
-
-owner.swal = opts => once(document.body)
-  ('sweet-alert', overwrite({
-    type: ''
-  , title: ''
-  , content: ''
-  , buttons: []
-  })(opts))

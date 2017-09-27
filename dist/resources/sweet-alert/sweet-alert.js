@@ -1,22 +1,18 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = swal;
-function swal(node, state) {
-  var o = once(node);
-  var m = o('.modal', 1);
-  var _state$exit = state.exit;
-  var exit = _state$exit === undefined ? false : _state$exit;
-  var _state$title = state.title;
-  var title = _state$title === undefined ? '' : _state$title;
-  var _state$content = state.content;
-  var content = _state$content === undefined ? '' : _state$content;
-  var _state$type = state.type;
-  var type = _state$type === undefined ? 'warning' : _state$type;
-  var _state$buttons = state.buttons;
-  var buttons = _state$buttons === undefined ? [] : _state$buttons;
+module.exports = function swal(node, state) {
+  var o = once(node),
+      m = o('.modal', 1),
+      _state$exit = state.exit,
+      exit = _state$exit === undefined ? false : _state$exit,
+      _state$title = state.title,
+      title = _state$title === undefined ? '' : _state$title,
+      _state$content = state.content,
+      content = _state$content === undefined ? '' : _state$content,
+      _state$type = state.type,
+      type = _state$type === undefined ? 'warning' : _state$type,
+      _state$buttons = state.buttons,
+      buttons = _state$buttons === undefined ? [] : _state$buttons;
 
 
   o(window).on('keydown.escape', keydown);
@@ -50,13 +46,4 @@ function swal(node, state) {
   }
 
   def(node, close);
-}
-
-owner.swal = function (opts) {
-  return once(document.body)('sweet-alert', overwrite({
-    type: '',
-    title: '',
-    content: '',
-    buttons: []
-  })(opts));
 };

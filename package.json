@@ -31,10 +31,10 @@
     "cssscope": "*",
     "popper": "*",
     "rijs.export": "*",
-    "tap": "^6.2.0",
+    "tap": "*",
     "tape": "*",
-    "tapify": "0.0.1",
-    "uglifyjs": "^2.4.10",
+    "tapify": "*",
+    "uglify-es": "*",
     "utilise": "*",
     "utilise.filify": "*"
   }
