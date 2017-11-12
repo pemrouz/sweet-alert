@@ -1,6 +1,10 @@
 'use strict';
 
-module.exports = function swal(node, state) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = swal;
+function swal(node, state) {
   var o = once(node),
       m = o('.modal', 1),
       _state$exit = state.exit,
@@ -46,4 +50,4 @@ module.exports = function swal(node, state) {
   }
 
   def(node, close);
-};
+}
