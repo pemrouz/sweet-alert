@@ -1,3 +1,4 @@
+module.exports = `
 *, 
 *::before, 
 *::after {
@@ -12,10 +13,13 @@
   z-index: 1000;
   animation: sweet-alert-filter-in 400ms;
   animation-fill-mode: forwards;
+  display: none;
   font-family: inherit; }
 
-:host(.exit) {
+:host(.exiting) {
   animation: sweet-alert-filter-out 400ms; }
+:host(.visible) {
+  display: flex }
 
 .overlay {
   display: block; 
@@ -29,16 +33,12 @@
   z-index: 1000; }
 
 .modal {
-  position: fixed;
+  margin: auto;  
   display: block;
   width: 500px;
   min-height: 313px;
   background: white;
   padding: 20px;
-  margin-left: -250px;
-  margin-top: -156px;
-  left: 50%;
-  top: 50%;
   text-align: center;
   border-radius: 5px;
   border: 1px solid rgba(0,0,0,0.25);
@@ -194,3 +194,4 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+`
