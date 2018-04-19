@@ -41,7 +41,7 @@ module.exports = define('sweet-alert', function swal(node, state){
   m('button', buttons)
     .text(d => d.text)
     .attr('class', d => d.type)
-    .on('click.default', (e, d) => (d.onClick || close)(e))
+    .on('click.default', (e, d, el) => (d.onClick || close)(e, d, el))
 
   function close() {
     state.exiting = true
