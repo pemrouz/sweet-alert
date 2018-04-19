@@ -14,7 +14,7 @@ module.exports = define('sweet-alert', function swal(node, state){
         , content = ''
         , type = 'warning'
         , visible = title || content ? true : false
-        , buttons = [] } = state
+        , buttons = [{ type: 'primary', text: 'Close' }] } = state
 
   o(window)
     .on('keydown.escape', keydown)
