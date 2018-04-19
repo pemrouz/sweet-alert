@@ -52,9 +52,11 @@ module.exports = define('sweet-alert', function swal(node, state){
     })
   }
 
-  function show(props) {
-    if (!props) return 
-    for (let prop in props) state[prop] = props[prop]
+  function show({ title, content, type, buttons } = {}) {
+    state.title = title
+    state.content = content
+    state.type = type
+    state.buttons = buttons
     state.visible = true
     return node.render() // TODO: change all draws
   }
